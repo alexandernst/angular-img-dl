@@ -6,11 +6,12 @@ aid.directive("angularImgDl", ["$http", function($http) {
 			angularImgDlModel: '=',
 			angularImgDlUrl: '@'
 		},
-		link: function(scope, ele, attr) {
-			$http.get(scope.angularImgDlUrl,{}, {
+		link: function(scope, elem, attrs) {
+			$http.get(scope.angularImgDlUrl, {
 				responseType: 'blob'
 			}).success(function (response) {
-				angularImgDlModel = response;
+				if(status !== 200) return;
+				scope.angularImgDlModel = response;
 			});
 		}
 	};

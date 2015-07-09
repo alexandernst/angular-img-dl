@@ -1,6 +1,6 @@
 {
 	"name": "angular-img-dl",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "AngularJS directive for downloading image blobs",
 	"main": [
 		"angular-img-dl.js"
