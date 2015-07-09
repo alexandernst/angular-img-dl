@@ -7,6 +7,7 @@ aid.directive("angularImgDl", ["$http", function($http) {
 			angularImgDlUrl: '@'
 		},
 		link: function(scope, elem, attrs) {
+			if(scope.angularImgDlUrl === undefined || scope.angularImgDlUrl === "") return;
 			$http.get(scope.angularImgDlUrl, {
 				responseType: 'blob'
 			}).success(function (response, status) {
